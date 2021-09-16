@@ -6,7 +6,7 @@
 #    By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/06 22:11:10 by arbernar          #+#    #+#              #
-#    Updated: 2021/09/15 23:15:46 by arbernar         ###   ########.fr        #
+#    Updated: 2021/09/16 03:05:12 by arbernar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,9 +40,4 @@ fclean:	clean
 
 re:	fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
-
-bonus:
-	
+.PHONY:	all clean fclean re
