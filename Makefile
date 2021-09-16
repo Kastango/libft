@@ -6,7 +6,7 @@
 #    By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/06 22:11:10 by arbernar          #+#    #+#              #
-#    Updated: 2021/09/16 03:05:12 by arbernar         ###   ########.fr        #
+#    Updated: 2021/09/16 03:11:16 by arbernar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,15 @@ SRC	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_strtrim.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_split.c
 
+BONUS_SRC = 
+
 CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
 OBJ := $(SRC:%.c=%.o)
+
+BONUS_OBJ := $(BONUS_SRC:%.c=%.o)
 
 all:	$(NAME)
 
@@ -40,4 +44,8 @@ fclean:	clean
 
 re:	fclean all
 
-.PHONY:	all clean fclean re
+bonus:
+	$(CC) $(CFLAGS) -c $(BONUS_SRC)
+	ar -rcs $(NAME) $(BONUS_OBJ)
+
+.PHONY:	all clean fclean re bonus
