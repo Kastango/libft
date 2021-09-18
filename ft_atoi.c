@@ -6,15 +6,15 @@
 /*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 23:58:19 by arbernar          #+#    #+#             */
-/*   Updated: 2021/09/10 00:45:20 by arbernar         ###   ########.fr       */
+/*   Updated: 2021/09/18 20:36:18 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *nptr)
 {
 	int	i;
-	int	sum;
-	int	negative;
+	long	sum;
+	long	negative;
 
 	i = 0;
 	negative = 1;
