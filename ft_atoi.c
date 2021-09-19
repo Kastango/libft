@@ -6,7 +6,7 @@
 /*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 23:58:19 by arbernar          #+#    #+#             */
-/*   Updated: 2021/09/19 17:12:26 by arbernar         ###   ########.fr       */
+/*   Updated: 2021/09/19 17:12:58 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ int	ft_atoi(const char *nptr)
 		else
 			break ;
 	}
-	return (sum, negative);
+	return (sum * negative);
 }
