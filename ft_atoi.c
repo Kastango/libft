@@ -6,16 +6,16 @@
 /*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 23:58:19 by arbernar          #+#    #+#             */
-/*   Updated: 2021/09/18 22:15:24 by arbernar         ###   ########.fr       */
+/*   Updated: 2021/09/18 22:21:53 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 static int	islong(long sum, long negative)
 {
 	if ((sum * negative) > 2147483647)
-		return (0);
-	else if ((sum * negative) < -2147483648)
 		return (-1);
+	else if ((sum * negative) < -2147483648)
+		return (0);
 	else
 		return (sum * negative);
 }
