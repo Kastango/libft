@@ -6,7 +6,7 @@
 /*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 00:11:00 by arbernar          #+#    #+#             */
-/*   Updated: 2021/09/16 20:31:55 by arbernar         ###   ########.fr       */
+/*   Updated: 2021/09/18 23:00:24 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,18 @@ static int	ft_getlenwd(const char *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**words;
-	int		n;
 	int		w_size;
 	int		i;
 	int		j;
 
-	n = ft_getnwd(s, c);
-	words = malloc((n + 1) * sizeof(char *));
-	if (!words || !s)
+	if (!s)
+		return (NULL);
+	words = malloc((ft_getnwd(s, c) + 1) * sizeof(char *));
+	if (!words)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (j < n)
+	while (j < ft_getnwd(s, c))
 	{
 		w_size = 0;
 		if (s[i] != c)
