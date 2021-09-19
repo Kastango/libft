@@ -6,7 +6,7 @@
 /*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 00:10:24 by arbernar          #+#    #+#             */
-/*   Updated: 2021/09/19 00:14:20 by arbernar         ###   ########.fr       */
+/*   Updated: 2021/09/19 15:56:47 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	if (!lst)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	new->next = *lst;
 	*lst = new;

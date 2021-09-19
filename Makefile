@@ -6,7 +6,7 @@
 #    By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/06 22:11:10 by arbernar          #+#    #+#              #
-#    Updated: 2021/09/19 00:18:16 by arbernar         ###   ########.fr        #
+#    Updated: 2021/09/19 16:05:20 by arbernar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,10 +25,8 @@ SRC	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_split.c
 OBJ	:=	$(SRC:%.c=%.o)
 
-BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c 
-#  \
-# 			ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-# 			ft_lstclear.c ft_lstiter.c ft_lstmap.c
+BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
 B_OBJ:=	$(BONUS_SRC:%.c=%.o)
 
 all:	$(NAME)
@@ -47,8 +45,7 @@ clean:
 	rm -rf *.o
 	rm -rf ./a.out
 
-fclean:	
-	clean
+fclean:	clean
 	rm -rf $(NAME)
 
 re:	fclean all
