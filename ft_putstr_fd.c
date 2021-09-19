@@ -6,7 +6,7 @@
 /*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 21:28:22 by arbernar          #+#    #+#             */
-/*   Updated: 2021/09/14 21:34:45 by arbernar         ###   ########.fr       */
+/*   Updated: 2021/09/18 22:56:18 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	if (ft_strlen(s) == 0)
 		return ;
 	i = 0;
