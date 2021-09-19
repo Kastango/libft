@@ -6,7 +6,7 @@
 /*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 01:13:12 by arbernar          #+#    #+#             */
-/*   Updated: 2021/09/19 16:43:58 by arbernar         ###   ########.fr       */
+/*   Updated: 2021/09/19 18:18:34 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
-
