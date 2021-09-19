@@ -6,13 +6,23 @@
 /*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 23:58:19 by arbernar          #+#    #+#             */
-/*   Updated: 2021/09/18 20:40:43 by arbernar         ###   ########.fr       */
+/*   Updated: 2021/09/18 21:50:37 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+static int	islong(long sum, long negative)
+{
+	if ((sum * negative) > 2147483647 )
+		return (-1);
+	else if ((sum * negative) < -2147483648)
+		return (0);
+	else
+		return (sum * negative);
+}
+
 int	ft_atoi(const char *nptr)
 {
-	int	i;
+	int		i;
 	long	sum;
 	long	negative;
 
@@ -35,5 +45,5 @@ int	ft_atoi(const char *nptr)
 		else
 			break ;
 	}
-	return (int)(sum * negative);
+	return (islong(sum, negative));
 }
