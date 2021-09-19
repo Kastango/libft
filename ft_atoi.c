@@ -6,7 +6,7 @@
 /*   By: arbernar <arbernar@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 23:58:19 by arbernar          #+#    #+#             */
-/*   Updated: 2021/09/18 22:09:16 by arbernar         ###   ########.fr       */
+/*   Updated: 2021/09/18 22:13:38 by arbernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,17 @@ int	ft_atoi(const char *nptr)
 			break ;
 	}
 	return (islong(sum, negative));
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	char str[] = "9999999999999999";
+	char str2[] = "-9999999999999999";
+	char str3[] = "5";
+	
+	printf("%i %i %i\n", ft_atoi(str), ft_atoi(str2), ft_atoi(str3));
+	printf("%i %i %i", atoi(str), atoi(str2), atoi(str3));
 }
